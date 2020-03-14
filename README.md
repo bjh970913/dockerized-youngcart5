@@ -1,8 +1,6 @@
 # Dockerized youngcart5
 
-https://sir.kr/main/yc5/
-
-오픈 소스 온라인 쇼핑몰 영카트 5 맥 개발환경 설정을 위한 Repo
+[오픈 소스 온라인 쇼핑몰 영카트 5](https://sir.kr/main/yc5/)  로컬 개발환경 설정을 위한 Repo
 
 # Init
 
