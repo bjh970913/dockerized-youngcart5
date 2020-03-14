@@ -14,7 +14,7 @@ services:
         source: ./.mysql_data
         target: /var/lib/mysql  
     ports:
-      - 3306:3306
+      - 33060:3306
   web:
     build:
       context: "./"
