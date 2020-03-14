@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+
+docker-compose -p gnu --project-directory . --no-ansi -f ./docker-compose.yml $@

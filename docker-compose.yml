@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=public
+      - MYSQL_USER=public
+      - MYSQL_PASSWORD=public
+      - POSTGRES_PASSWORD=unit_test_password
+      - POSTGRES_DB=mock_vida_db
+    volumes:
+      - type: bind
+        source: ./.mysql_data
+        target: /var/lib/mysql  
+    ports:
+      - 3306:3306
+  web:
+    build:
+      context: "./"
+      dockerfile: "php-7.3.11-apache2-gd"
+    # image: php:7.3.11-apache
+    volumes:
+      - type: bind
+        source: ./src
+        target: /var/www/html
+    ports:
+      - 8080:80
